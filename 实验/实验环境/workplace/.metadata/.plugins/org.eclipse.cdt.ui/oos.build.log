@@ -1,0 +1,113 @@
+
+**** Build of configuration Default for project oos ****
+
+make all 
+make --directory=boot
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/boot'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/boot'
+make --directory=kernel
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/kernel'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/kernel'
+make --directory=machine
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/machine'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/machine'
+make --directory=interrupt
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/interrupt'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/interrupt'
+make --directory=mm
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/mm'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/mm'
+make --directory=proc
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/proc'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/proc'
+make --directory=dev
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/dev'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/dev'
+make --directory=fs
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/fs'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/fs'
+make --directory=tty
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/tty'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/tty'
+make --directory=test
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/test'
+make --directory=dev
+make[2]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/test/dev'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/test/dev'
+make --directory=fs
+make[2]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/test/fs'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/test/fs'
+make --directory=lib
+make[2]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/test/lib'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/test/lib'
+make --directory=mm
+make[2]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/test/mm'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/test/mm'
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/test'
+make --directory=pe
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/pe'
+make[1]: `all' is up to date.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/pe'
+make --directory=lib
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/lib'
+ar -crv Lib_V6++.a .\objs\file.o .\objs\sys.o .\objs\stdio.o .\objs\stdlib.o .\objs\string.o .\objs\double.o .\objs\float.o .\objs\sprintf.o .\objs\print_parse.o .\objs\time.o .\objs\malloc.o
+r - .\objs\file.o
+r - .\objs\sys.o
+r - .\objs\stdio.o
+r - .\objs\stdlib.o
+r - .\objs\string.o
+r - .\objs\double.o
+r - .\objs\float.o
+r - .\objs\sprintf.o
+r - .\objs\print_parse.o
+r - .\objs\time.o
+r - .\objs\malloc.o
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/lib'
+make --directory=program
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/program'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/program'
+make --directory=shell
+make[1]: Entering directory `D:/study files/operating system/unix_tools/64/oos/src/shell'
+gcc -W -O0 -g -nostdlib -nostdinc -nostartfiles -fno-builtin -fno-exceptions .\OBJS\commandtree.o .\OBJS\executecommand.o .\OBJS\preexecute.o .\OBJS\main.o "..\lib\Lib_V6++.a" -e _main1 -o .\OBJS\Shell.exe
+copy .\OBJS\Shell.exe ..\..\tools\MakeImage\bin\Debug\programs\Shell.exe
+已复制         1 个文件。
+make[1]: Leaving directory `D:/study files/operating system/unix_tools/64/oos/src/shell'
+ld -T Link.ld ..\targets\objs\sector2.bin  ..\targets\objs\allocator.o   ..\targets\objs\atadriver.o   ..\targets\objs\blockdevice.o   ..\targets\objs\buffermanager.o   ..\targets\objs\chardevice.o   ..\targets\objs\chip8253.o   ..\targets\objs\chip8259A.o   ..\targets\objs\cmostime.o   ..\targets\objs\crt.o   ..\targets\objs\devicemanager.o   ..\targets\objs\diskinterrupt.o   ..\targets\objs\dma.o   ..\targets\objs\exception.o   ..\targets\objs\file.o   ..\targets\objs\filemanager.o   ..\targets\objs\filesystem.o   ..\targets\objs\gdt.o   ..\targets\objs\idt.o   ..\targets\objs\inode.o   ..\targets\objs\kernel.o   ..\targets\objs\kernelallocator.o   ..\targets\objs\keyboard.o   ..\targets\objs\keyboardinterrupt.o   ..\targets\objs\lib.o   ..\targets\objs\machine.o   ..\targets\objs\main.o   ..\targets\objs\memorydescriptor.o   ..\targets\objs\new.o   ..\targets\objs\openfilemanager.o   ..\targets\objs\pagedirectory.o   ..\targets\objs\pagemanager.o   ..\targets\objs\PEParser.o   ..\targets\objs\process.o   ..\targets\objs\processmanager.o   ..\targets\objs\support.o   ..\targets\objs\swappermanager.o   ..\targets\objs\systemcall.o   ..\targets\objs\taskstatesegment.o   ..\targets\objs\testbuffermanager.o   ..\targets\objs\testfilesystem.o   ..\targets\objs\testlib.o   ..\targets\objs\testswappermanager.o   ..\targets\objs\testutility.o   ..\targets\objs\text.o   ..\targets\objs\timeinterrupt.o   ..\targets\objs\tty.o   ..\targets\objs\user.o   ..\targets\objs\utility.o   ..\targets\objs\video.o  -o ..\targets\objs\kernel.exe	
+objcopy -O binary ..\targets\objs\kernel.exe ..\targets\objs\kernel.bin
+nm ..\targets\objs\kernel.exe > ..\targets\objs\kernel.sym
+objdump -d ..\targets\objs\kernel.exe  > ..\targets\objs\kernel.asm
+copy ..\targets\objs\boot.bin ..\targets\img\boot.bin
+已复制         1 个文件。
+copy ..\targets\objs\kernel.bin ..\targets\img\kernel.bin
+已复制         1 个文件。
+copy ..\targets\objs\kernel.sym  ..\targets\img\kernel.sym
+已复制         1 个文件。
+copy ..\targets\objs\kernel.asm  ..\targets\img\kernel.asm
+已复制         1 个文件。
+cd ..\targets\img && partcopy boot.bin 0 200 c.img 0
+cd ..\targets\img && partcopy kernel.bin 0 13000 c.img 200
+copy ..\targets\objs\boot.bin ..\tools\MakeImage\bin\Debug\boot.bin
+已复制         1 个文件。
+copy ..\targets\objs\kernel.bin ..\tools\MakeImage\bin\Debug\kernel.bin
+已复制         1 个文件。
+copy ..\targets\img\c.img ..\tools\MakeImage\bin\Debug\c.img
+已复制         1 个文件。
+cd ..\tools\MakeImage\bin\Debug && build.exe c.img boot.bin kernel.bin programs
+copy ..\tools\MakeImage\bin\Debug\c.img "..\targets\UNIXV6++"\c.img
+已复制         1 个文件。
+
+**** Build Finished ****
